@@ -1,0 +1,3 @@
+defaults.bluealsa.interface "hci0"
+defaults.bluealsa.device "C0:28:8D:02:8D:8E"
+defaults.bluealsa.profile "a2dp"

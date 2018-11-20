@@ -58,6 +58,12 @@ defaults.bluealsa.profile "a2dp"
 https://raspberrypi.stackexchange.com/a/53456
 https://raspberrypi.stackexchange.com/a/53745
 
+## streaming mp3 playback
+
+#### mplayer
+
+https://www.raspberrypi.org/forums/viewtopic.php?t=189323
+
 ## Mopidy (no longer used)
 
 #### mopidy installation

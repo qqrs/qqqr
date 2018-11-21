@@ -39,7 +39,7 @@ def play_buzz():
     subprocess.call(['aplay', '-D', 'bluealsa', '/usr/share/sounds/alsa/Noise.wav'])
 
 
-def scan_barcodes_loop(vs, tmax=120):
+def scan_barcodes_loop(vs, tmax=1200):
     log.debug('scan_barcodes_loop')
     log.info('Ready for barcodes...')
     t0 = time.time()
@@ -88,10 +88,9 @@ def main():
 
     vs = init()
 
-    play_buzz()
-
     while True:
-        barcodes = scan_barcodes_loop(vs, tmax=120)
+        play_buzz()
+        barcodes = scan_barcodes_loop(vs, tmax=1200)
         if not barcodes:
             # Timed out without detecting a barcode.
             break

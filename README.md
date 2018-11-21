@@ -6,6 +6,13 @@
 
 https://learn.adafruit.com/raspberry-pi-zero-creation/text-file-editing
 
+#### Raspberry PI hardware RNG
+
+(Fixes "getrandom() initialization failed" error)
+
+`sudo apt install rng-tools`
+
+
 ## OpenCV installation
 
 #### ROSbots
@@ -26,9 +33,9 @@ https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/
 
 #### Pairing Bluetooth speaker
 
-https://www.sigmdel.ca/michel/ha/rpi/bluetooth_01_en.html
+https://www.sigmdel.ca/michel/ha/rpi/bluetooth_01_en.html  
 
-https://gist.github.com/actuino/9548329d1bba6663a63886067af5e4cb
+https://gist.github.com/actuino/9548329d1bba6663a63886067af5e4cb  
 
 #### Reconnect Bluetooth speaker
 

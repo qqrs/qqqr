@@ -1,6 +1,7 @@
 import time
 import logging
 import argparse
+import subprocess
 
 from imutils.video import VideoStream
 from pyzbar import pyzbar
@@ -31,6 +32,11 @@ def init():
 def cleanup(vs):
     log.debug('cleanup')
     vs.stop()
+
+
+def play_buzz():
+    """Play a sound to indicate success"""
+    subprocess.call(['aplay', '-D', 'bluealsa', '/usr/share/sounds/alsa/Noise.wav'])
 
 
 def scan_barcodes_loop(vs, tmax=120):
@@ -82,17 +88,21 @@ def main():
 
     vs = init()
 
+    play_buzz()
+
     while True:
         barcodes = scan_barcodes_loop(vs, tmax=120)
         if not barcodes:
             # Timed out without detecting a barcode.
             break
 
+        play_buzz()
+
         if len(barcodes) > 1:
             log.warning('detected multiple barcodes in frame')
 
         track_id = parse_qqqr_barcode(barcodes[0])
-        gmusicplay.stream_gmusic_track_blocking(track_id)
+        gmusicplay.play_gmusic_track_blocking(track_id)
 
     cleanup(vs)
 

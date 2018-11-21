@@ -12,6 +12,18 @@ https://learn.adafruit.com/raspberry-pi-zero-creation/text-file-editing
 
 `sudo apt install rng-tools`
 
+## Camera focal length adjustment
+
+#### video stream preview (2-3 second lag)
+https://raspberrypi.stackexchange.com/a/71680  
+`raspivid -t 0 -l -o tcp://0.0.0.0:3333`  
+`/Applications/VLC.app/Contents/MacOS/VLC tcp/h264://qqpi.lan:3333`  
+
+#### focal length adjustment
+(counter-clockwise is closer focal length)
+https://www.jeffgeerling.com/blog/2017/fixing-blurry-focus-on-some-raspberry-pi-camera-v2-models  
+(optional) https://www.adafruit.com/product/3519  
+
 
 ## OpenCV installation
 

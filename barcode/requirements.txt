@@ -116,3 +116,4 @@ wcwidth==0.1.7
 webencodings==0.5
 wstool==0.1.17
 zope.interface==4.3.2
+-e git+https://github.com/plamere/spotipy.git#egg=spotipy

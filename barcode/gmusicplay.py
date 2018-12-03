@@ -9,6 +9,7 @@ from gmusicapi import Mobileclient
 import gmusic_secrets
 
 api = None
+track_id_info_lookup = None
 
 
 def init_gmusic_api():
@@ -19,6 +20,14 @@ def init_gmusic_api():
     logged_in = api.login(gmusic_secrets.USERNAME, gmusic_secrets.PW, Mobileclient.FROM_MAC_ADDRESS)
     assert(logged_in)
     print('init_gmusic_api finished: %0.2f' % (time.time() - t0))
+
+
+def init_gmusic_track_id_info():
+    global track_id_info_lookup
+    lib = api.get_all_songs()
+    thumbs_up = [t for t in lib if t.get('rating') == '5']
+    track_id_info_lookup = {
+        t['id']: (t['artist'], t['title']) for t in thumbs_up}
 
 
 def play_mp3_file_blocking(f):
@@ -66,6 +75,21 @@ def stream_gmusic_track_blocking(track_id, verbose=False):
         print(track_url)
 
     stream_mp3_url_blocking(track_url)
+
+
+def get_gmusic_track_info(track_id):
+    if api is None:
+        init_gmusic_api()
+
+    global track_id_info_lookup
+    if track_id_info_lookup is None:
+        init_gmusic_track_id_info()
+
+    if track_id not in track_id_info_lookup:
+        return None
+
+    artist, title = track_id_info_lookup[track_id]
+    return (artist, title)
 
 
 def main():

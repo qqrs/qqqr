@@ -5,7 +5,9 @@ import subprocess
 
 from imutils.video import VideoStream
 from pyzbar import pyzbar
+
 import gmusicplay
+import spotifyplay
 
 
 log = logging
@@ -21,6 +23,8 @@ def init():
 
     # Initialize Google Play Music api.
     gmusicplay.init_gmusic_api()
+    gmusicplay.init_gmusic_track_id_info()
+    spotifyplay.init_spotipy()
 
     # Ensure camera sensor has had time to warm up.
     while time.time() - t0 < 2.0:
@@ -89,19 +93,29 @@ def main():
     vs = init()
 
     while True:
-        play_buzz()
+        #play_buzz()
         barcodes = scan_barcodes_loop(vs, tmax=1200)
         if not barcodes:
             # Timed out without detecting a barcode.
             break
 
-        play_buzz()
+        #play_buzz()
 
         if len(barcodes) > 1:
             log.warning('detected multiple barcodes in frame')
 
         track_id = parse_qqqr_barcode(barcodes[0])
-        gmusicplay.play_gmusic_track_blocking(track_id)
+        #gmusicplay.play_gmusic_track_blocking(track_id)
+        artist, title = gmusicplay.get_gmusic_track_info(track_id)
+        print((artist, title))
+        (sartist, stitle, uri) = spotifyplay.find_spotify_track(artist, title)
+        if uri is None:
+            print('No spotify track found')
+            continue
+        print('Matched spotify track: %s - %s' % (sartist, title))
+        spotifyplay.play_spotify_track(uri)
+
+        time.sleep(3)
 
     cleanup(vs)
 

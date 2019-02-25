@@ -1,4 +1,14 @@
-# QQQR: qr-code music player
+# qqqr: QR code music player
+
+![QQQR](qqqr.jpg)
+
+Ever wished you had physical albums for all your cloud music? Tired of carrying a dozen milk crates full of vinyl records up and down stairs when you move?
+
+qqqr is a Raspberry Pi Zero W project which uses ZBar and OpenCV to read paper QR code cards encoding Google Play Music track IDs and play the songs over a Bluetooth speaker.
+
+Project status: abandoned. Everything worked. But I found out that I can use the Spotify app to scan [Spotify Codes](https://www.spotifycodes.com/index.html), so I decided not to put more time into polishing qqqr.
+
+Fair warning: if you go on an archaeological dig in the code, you'll see that I tried `mplayer`, `mpg321`, and `mopidy` for playback. I found that all of them took about 10 - 30 seconds to start playing from Google Play Music after the track ID was identified, whether streaming or pre-caching. I'm sure there's a solution but I didn't dig very deeply. My workaround solution was to use [Spotify Connect](https://www.spotify.com/us/connect/) for playback instead of local playback from Google Play Music.
 
 ## Raspberry Pi config
 
@@ -27,7 +37,7 @@ https://www.jeffgeerling.com/blog/2017/fixing-blurry-focus-on-some-raspberry-pi-
 
 ## OpenCV installation
 
-#### ROSbots
+#### OpenCV SD card image
 
 SD card image with precompiled OpenCV binaries
 
@@ -35,11 +45,15 @@ https://medium.com/@rosbots/ready-to-use-image-raspbian-stretch-ros-opencv-324d6
 
 https://github.com/ROSbots/rosbots_setup_tools#use-our-existing-rosbots-raspbianrosopencv-image-after-youve-downloaded-it
 
-#### PyImageSearch
+#### Compiling OpenCV
 
-Instructions for compiling OpenCV on Raspberry Pi. Takes 24+ hours on Raspberry Pi Zero!
+Instructions for compiling OpenCV on Raspberry Pi. (Turned out this takes 24+ hours on Raspberry Pi Zero so I gave up and used the ROSbots SD card image above.)
 
 https://www.pyimagesearch.com/2018/09/26/install-opencv-4-on-your-raspberry-pi/
+
+## QR code scanning
+
+https://www.pyimagesearch.com/2018/05/21/an-opencv-barcode-and-qr-code-scanner-with-zbar/
 
 ## Bluetooth speaker
 
@@ -83,7 +97,8 @@ https://raspberrypi.stackexchange.com/a/53745
 
 https://www.raspberrypi.org/forums/viewtopic.php?t=189323
 
-## Mopidy (no longer used)
+## Mopidy installation and playback
+(no longer using Mopidy—see explanation at top of page)
 
 #### mopidy installation
 

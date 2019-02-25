@@ -33,7 +33,7 @@ https://raspberrypi.stackexchange.com/a/71680
 (counter-clockwise is closer focal length)  
 https://www.jeffgeerling.com/blog/2017/fixing-blurry-focus-on-some-raspberry-pi-camera-v2-models  
 
-(optional)
+(optional)  
 https://www.adafruit.com/product/3519  
 
 

@@ -10,7 +10,7 @@ log = logging
 sp = None
 device_id = None
 
-DEVICE_NAME = 'OD-11'
+DEVICE_NAME = 'SOME_DEVICE_NAME'
 
 
 def init_spotipy():
@@ -27,7 +27,7 @@ def init_spotipy():
     devices = [v['id'] for v in sp.devices()['devices']
                if v['name'] == DEVICE_NAME]
     if not devices:
-        raise Exception('OD-11 spotify device not found')
+        raise Exception('spotify device not found')
     global device_id
     device_id = devices[0]
 

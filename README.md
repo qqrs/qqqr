@@ -4,7 +4,7 @@
 
 Ever wished you had physical albums for all your cloud music? Tired of carrying a dozen milk crates full of vinyl records up and down stairs when you move?
 
-qqqr is a Raspberry Pi Zero W project which uses ZBar and OpenCV to read paper QR code cards encoding Google Play Music track IDs and play the songs over a Bluetooth speaker.
+qqqr is a Raspberry Pi Zero W project which uses ZBar and OpenCV to read paper QR code cards encoding Google Play Music track IDs and plays the songs over a Bluetooth speaker.
 
 Project status: abandoned. Everything worked. But I found out that I can use the Spotify app to scan [Spotify Codes](https://www.spotifycodes.com/index.html), so I decided not to put more time into polishing qqqr.
 

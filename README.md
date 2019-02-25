@@ -30,9 +30,11 @@ https://raspberrypi.stackexchange.com/a/71680
 `/Applications/VLC.app/Contents/MacOS/VLC tcp/h264://qqpi.lan:3333`  
 
 #### focal length adjustment
-(counter-clockwise is closer focal length)
+(counter-clockwise is closer focal length)  
 https://www.jeffgeerling.com/blog/2017/fixing-blurry-focus-on-some-raspberry-pi-camera-v2-models  
-(optional) https://www.adafruit.com/product/3519  
+
+(optional)
+https://www.adafruit.com/product/3519  
 
 
 ## OpenCV installation

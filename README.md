@@ -8,7 +8,7 @@ qqqr is a Raspberry Pi Zero W project which uses ZBar and OpenCV to read paper Q
 
 Project status: abandoned. Everything worked. But I found out that I can use the Spotify app to scan [Spotify Codes](https://www.spotifycodes.com/index.html), so I decided not to put more time into polishing qqqr.
 
-Fair warning: if you go on an archaeological dig in the code, you'll see that I tried `mplayer`, `mpg321`, and `mopidy` for playback. I found that all of them took about 10 - 30 seconds to start playing from Google Play Music after the track ID was identified, whether streaming or pre-caching. I'm sure there's a solution but I didn't dig very deeply. My workaround solution was to use [Spotify Connect](https://www.spotify.com/us/connect/) for playback instead of local playback from Google Play Music.
+Fair warning: if you go on an archaeological dig in the code, you'll see that I tried `mplayer`, `mpg321`, and `mopidy` for playback. I found that all of them took about 10 - 30 seconds to start playing from Google Play Music after the track ID was identified, whether streaming or pre-caching. I'm sure there's a solution but I didn't keep digging. My workaround solution was to use [Spotify Connect](https://www.spotify.com/us/connect/) for playback instead of local playback from Google Play Music.
 
 ## Raspberry Pi config
 

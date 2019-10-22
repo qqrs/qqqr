@@ -58,7 +58,7 @@ pexpect==4.6.0
 pgrep==0.0.0
 picamera==1.13
 pickleshare==0.7.5
-Pillow==4.0.0
+Pillow==6.2.0
 proboscis==1.2.6.0
 prompt-toolkit==1.0.15
 protobuf==3.6.1

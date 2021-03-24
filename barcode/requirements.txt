@@ -91,7 +91,7 @@ rosinstall-generator==0.1.14
 rospkg==1.1.7
 rospkg-modules==1.1.7
 RPi.GPIO==0.6.4
-rsa==4.0
+rsa==4.1
 runcmd==0.0.3
 scandir==1.9.0
 SecretStorage==2.3.1

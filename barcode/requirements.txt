@@ -79,7 +79,7 @@ pyparsing==2.1.10
 Pyste==0.9.10
 python-dateutil==2.7.5
 pyxdg==0.25
-PyYAML==3.12
+PyYAML==5.4
 pyzbar==0.1.7
 requests==2.20.0
 roman==2.0.0

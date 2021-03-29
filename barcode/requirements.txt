@@ -69,7 +69,7 @@ pyasn1==0.4.4
 pyasn1-modules==0.2.2
 pycrypto==2.6.1
 pycryptodomex==3.7.0
-Pygments==2.2.0
+Pygments==2.7.4
 pygobject==3.22.0
 pygpgme==0.3
 Pykka==1.2.1

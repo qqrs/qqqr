@@ -104,7 +104,7 @@ temp==1.0.2
 tornado==4.4.3
 traitlets==4.3.2
 uritools==2.2.0
-urllib3==1.24.1
+urllib3==1.26.5
 validictory==1.1.2
 vcstools==0.1.40
 virtualenv==16.1.0

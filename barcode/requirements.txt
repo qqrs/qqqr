@@ -28,7 +28,7 @@ httplib2==0.11.3
 idna==2.7
 imutils==0.5.1
 ipaddress==1.0.17
-ipython==5.8.0
+ipython==7.16.3
 ipython-genutils==0.2.0
 keyring==10.1
 keyrings.alt==1.3

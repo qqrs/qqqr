@@ -7,7 +7,7 @@ bzr==2.8.0.dev1
 cachetools==3.0.0
 catkin-pkg==0.4.9
 catkin-pkg-modules==0.4.9
-certifi==2018.10.15
+certifi==2022.12.7
 chardet==3.0.4
 configobj==5.0.6
 coverage==4.2
